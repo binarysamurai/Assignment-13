@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="skyview">
+    <span>
+        Hi! Please enter your name:
+    </span>
+    <input type="text" ng-model="name"/>
+    <hello></hello>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript">
+        var appModule = angular.module('skyview', []);
+        appModule.directive('hello', function () {
+            var def = {
+                restrict: 'E',
+                template: '<div>Hi {{name}}, Welcome to Skyview</div>'
+
+            }
+            return def;
+        })
+    </script>
+
+</body>
+</html>
